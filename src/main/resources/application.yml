@@ -1,0 +1,9 @@
+server:
+ port: 8080
+spring:
+  application:
+    name: Translator
+    
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
