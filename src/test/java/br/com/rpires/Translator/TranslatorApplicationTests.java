@@ -29,5 +29,21 @@ class TranslatorApplicationTests {
 		String mourseCode = mourceService.translateToMourse(humanFrase);
 		assertEquals(expected, mourseCode);
 	}
+	
+	@Test
+	void convertBinaryToHumanFrase() {
+		String expectedHuman = "Rodrigo";
+		String binary = "01010010 01101111 01100100 01110010 01101001 01100111 01101111";
+		String humanFrase = mourceService.translateBinaryToHumanFrase(binary);
+		assertEquals(expectedHuman, humanFrase);
+	}
+	
+	@Test
+	void convertHumanFraseToBinary() {
+		String expectedBinary = "01010010 01101111 01100100 01110010 01101001 01100111 01101111";
+		String human = "Rodrigo";
+		String binary = mourceService.translateHumanFraseToBinary(human);
+		assertEquals(expectedBinary, binary);
+	}
 
 }

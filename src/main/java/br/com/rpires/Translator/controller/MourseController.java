@@ -66,14 +66,14 @@ public class MourseController {
 	}
 	
 	@Operation(summary = "Translate to mourse code")
-	//@GetMapping(value = "translate/binary/mourse/code")
+	@GetMapping(value = "translate/binary/mourse/code")
 	public ResponseEntity<String> convertBinaryToMourse(
 			@RequestParam(required = true) @NotBlank @Parameter(description = "Binary value", required = true) String binary) {
 		return ResponseEntity.ok(mourceService.translateBinaryToMourse(binary));
 	}
 	
 	@Operation(summary = "Translate to binary")
-	//@GetMapping(value = "translate/mourse/binary/code")
+	@GetMapping(value = "translate/mourse/binary/code")
 	public ResponseEntity<String> convertMourseToBinary(
 			@RequestParam(required = true) @NotBlank @Parameter(description = "Mourse coude", required = true) String mourseCode) {
 		return ResponseEntity.ok(mourceService.translateMourseToBinary(mourseCode));
